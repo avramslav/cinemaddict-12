@@ -7,5 +7,12 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, 'public')
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  devServer: {
+    static:{
+      directory: path.join(__dirname,'public') // Где искать сборку
+    },
+    compress: true,
+    port: 8080 // Веб адрес сборки
+  }
 };
