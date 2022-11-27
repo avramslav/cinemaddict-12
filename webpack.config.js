@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 module.exports = {
   mode: 'development', // Режим сборки
@@ -7,12 +7,12 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, 'public')
   },
-  devtool: 'source-map',
+  devtool: 'source-map', // Подключаем sourcemaps
   devServer: {
-    static:{
-      directory: path.join(__dirname,'public') // Где искать сборку
+    static: {
+      directory: path.join(__dirname, 'public'), // Где искать сборку
     },
     compress: true,
-    port: 8080 // Веб адрес сборки
+    port: 9000 // Веб адрес сборки
   }
 };
